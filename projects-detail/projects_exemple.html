@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mes Projets - Cino</title>
+  <meta name="description" content="Portfolio des projets réalisés par Ton Prénom"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            primary: '#1e40af',
+            secondary: '#1e293b',
+            accent: '#3b82f6',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+  <!-- Navigation (identique) -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-primary">Cino</a>
+      <div class="hidden md:flex space-x-10">
+        <a href="index.html" class="hover:text-accent transition font-medium">Accueil</a>
+        <a href="projects.html" class="text-accent font-bold">Mes Projets</a>
+        <a href="about.html" class="hover:text-accent transition font-medium">À propos</a>
+        <a href="contact.html" class="hover:text-accent transition font-medium">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-3xl">Menu</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <a href="index.html" class="block py-3 px-6 hover:bg-gray-100">Accueil</a>
+      <a href="projects.html" class="block py-3 px-6 bg-gray-100 font-bold">Mes Projets</a>
+      <a href="about.html" class="block py-3 px-6 hover:bg-gray-100">À propos</a>
+      <a href="contact.html" class="block py-3 px-6 hover:bg-gray-100">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Section Projets avec filtres -->
+  <section class="pt-32 pb-20 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-secondary">
+        Mes Projets
+      </h2>
+
+      <!-- Boutons de filtre -->
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button data-filter="all" class="filter-btn px-6 py-3 rounded-lg font-semibold bg-primary text-white shadow-md active">
+          Tous
+        </button>
+        <button data-filter="web" class="filter-btn px-6 py-3 rounded-lg font-semibold bg-gray-200 text-gray-700 hover:bg-primary hover:text-white transition">
+          Web
+        </button>
+        <button data-filter="mobile" class="filter-btn px-6 py-3 rounded-lg font-semibold bg-gray-200 text-gray-700 hover:bg-primary hover:text-white transition">
+          Mobile
+        </button>
+        <button data-filter="backend" class="filter-btn px-6 py-3 rounded-lg font-semibold bg-gray-200 text-gray-700 hover:bg-primary hover:text-white transition">
+          Backend
+        </button>
+        <button data-filter="fullstack" class="filter-btn px-6 py-3 rounded-lg font-semibold bg-gray-200 text-gray-700 hover:bg-primary hover:text-white transition">
+          Full-Stack
+        </button>
+      </div>
+
+      <!-- Grille de projets -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- Projet 1 -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2" 
+             data-category="web fullstack">
+          <img src="assets/img/Gestion_de_note.png" alt="Projet 1" class="w-full h-48 object-cover"/>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-secondary mb-2">Site de Gestion de note</h3>
+            <p class="text-gray-600 mb-4">Html · Css · Bootstrap · Laravel</p>
+            <div class="flex gap-3">
+              <a href="projects-detail/Edunet_detail.html" class="flex-1 bg-primary hover:bg-accent text-white font-semibold py-3 rounded-lg text-center">Voir le Projet</a>
+              <a href="https://github.com/tonpseudo/projet1" target="_blank" class="flex-1 border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-lg text-center">Code Source</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2" 
+             data-category="mobile">
+          <img src="assets/img/projet2.jpg" alt="Projet 2" class="w-full h-48 object-cover"/>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-secondary mb-2">App de Gestion de Tâches</h3>
+            <p class="text-gray-600 mb-4">React Native · Firebase · Expo</p>
+            <div class="flex gap-3">
+              <a href="#" class="flex-1 bg-primary hover:bg-accent text-white font-semibold py-3 rounded-lg text-center">Voir le Projet</a>
+              <a href="https://github.com/tonpseudo/projet2" target="_blank" class="flex-1 border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-lg text-center">Code Source</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2" 
+             data-category="backend">
+          <img src="assets/img/projet3.jpg" alt="Projet 3" class="w-full h-48 object-cover"/>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-secondary mb-2">API REST avec Auth</h3>
+            <p class="text-gray-600 mb-4">Node.js · Express · JWT · PostgreSQL</p>
+            <div class="flex gap-3">
+              <a href="#" class="flex-1 bg-primary hover:bg-accent text-white font-semibold py-3 rounded-lg text-center">Documentation</a>
+              <a href="https://github.com/tonpseudo/api-projet" target="_blank" class="flex-1 border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-lg text-center">Code Source</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 4 -->
+        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2" 
+             data-category="web">
+          <img src="assets/img/projet4.jpg" alt="Projet 4" class="w-full h-48 object-cover"/>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-secondary mb-2">Dashboard Analytics</h3>
+            <p class="text-gray-600 mb-4">Vue.js · Chart.js · Tailwind</p>
+            <div class="flex gap-3">
+              <a href="#" class="flex-1 bg-primary hover:bg-accent text-white font-semibold py-3 rounded-lg text-center">Voir le Projet</a>
+              <a href="https://github.com/tonpseudo/dashboard" target="_blank" class="flex-1 border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 rounded-lg text-center">Code Source</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ajoute autant de projets que tu veux -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript pour les filtres -->
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filterValue = button.getAttribute('data-filter');
+
+        // Mise à jour visuelle des boutons
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-primary', 'text-white');
+          btn.classList.add('bg-gray-200', 'text-gray-700');
+        });
+        button.classList.remove('bg-gray-200', 'text-gray-700');
+        button.classList.add('bg-primary', 'text-white');
+
+        // Filtrage des cartes
+        projectCards.forEach(card => {
+          const categories = card.getAttribute('data-category').split(' ');
+          if (filterValue === 'all' || categories.includes(filterValue)) {
+            card.style.display = 'block';
+            setTimeout(() => card.style.opacity = '1', 50);
+          } else {
+            card.style.opacity = '0';
+            setTimeout(() => card.style.display = 'none', 300);
+          }
+        });
+      });
+    });
+
+    // Menu mobile
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

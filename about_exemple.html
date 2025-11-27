@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>À propos - Cino</title>
+  <meta name="description" content="Parcours, compétences et expériences de Ton Prénom, étudiant en 3ᵉ année Licence Pro Développement d'Applications"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            primary: '#1e40af',
+            secondary: '#1e293b',
+            accent: '#3b82f6',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-primary">Cino</a>
+      <div class="hidden md:flex space-x-10">
+        <a href="index.html" class="hover:text-accent transition font-medium">Accueil</a>
+        <a href="projects.html" class="hover:text-accent transition font-medium">Mes Projets</a>
+        <a href="about.html" class="text-accent font-bold">À propos</a>
+        <a href="contact.html" class="hover:text-accent transition font-medium">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-3xl">Menu</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <a href="index.html" class="block py-3 px-6 hover:bg-gray-100">Accueil</a>
+      <a href="projects.html" class="block py-3 px-6 hover:bg-gray-100">Mes Projets</a>
+      <a href="about.html" class="block py-3 px-6 bg-gray-100 font-bold">À propos</a>
+      <a href="contact.html" class="block py-3 px-6 hover:bg-gray-100">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero À propos -->
+  <section class="pt-28 pb-16 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Photo / Illustration -->
+      <div class="order-1 md:order-2 flex justify-center">
+        <div class="relative">
+          <div class="absolute inset-0 bg-primary opacity-20 blur-3xl rounded-full"></div>
+          <img src="assets/img/tof_cino.jpeg" 
+               alt="Cino" 
+               class="relative w-80 h-80 object-cover rounded-full shadow-2xl border-8 border-white"/>
+        </div>
+      </div>
+
+      <!-- Texte présentation -->
+      <div class="order-2 md:order-1 space-y-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-secondary">
+          Salut, je suis <span class="text-primary">Prénom Nom</span>
+        </h1>
+        <p class="text-xl text-gray-700 leading-relaxed">
+          Étudiant en <strong>3ᵉ année de Licence Professionnelle Développement d’Applications</strong>, 
+          passionné par le développement full-stack, les applications mobiles et la création de solutions utiles et performantes.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Je maîtrise les technologies (que sont le html, le CSS, le php, le Java, le python dart, framework laravel et MySql.) 
+          et j’aime transformer des idées en produits concrets, propres et bien pensés.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Actuellement à la recherche d’un <strong>stage de fin d’études (ou alternance)</strong> 
+          pour mettre mes compétences au service d’une équipe et continuer à progresser rapidement.
+        </p>
+
+        <div class="pt-4">
+          <a href="assets/cv/CV-Prenom-Nom.pdf" download
+             class="inline-block bg-primary hover:bg-accent text-white font-bold py-4 px-8 rounded-lg shadow-lg transition transform hover:scale-105">
+             Télécharger mon CV (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Parcours -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-extrabold text-center text-secondary mb-16">Mon Parcours</h2>
+      
+      <div class="space-y-12">
+        <div class="flex">
+          <div class="flex-shrink-0 w-4 h-4 bg-primary rounded-full mt-2"></div>
+          <div class="ml-8 pb-10 border-l-4 border-gray-200 pl-8">
+            <span class="text-accent font-bold">2023 → 2026</span>
+            <h3 class="text-2xl font-bold text-secondary">Licence Pro Développement d'Applications</h3>
+            <p class="text-gray-600">Université de FORMATEC [Lomé-TOGO] – Spécialité Full-Stack & Mobile</p>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="flex-shrink-0 w-4 h-4 bg-primary rounded-full mt-2"></div>
+          <div class="ml-8 pb-10 border-l-4 border-gray-200 pl-8">
+            <span class="text-accent font-bold">2021 → 2023</span>
+            <h3 class="text-2xl font-bold text-secondary">BTS SIO option SLAM</h3>
+            <p class="text-gray-600">Lycée [Nom] – Mention Bien</p>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="flex-shrink-0 w-4 h-4 bg-primary rounded-full mt-2"></div>
+          <div class="ml-8 pl-8">
+            <span class="text-accent font-bold">Stage 2024</span>
+            <h3 class="text-2xl font-bold text-secondary">Développeur Full-Stack (2 mois)</h3>
+            <p class="text-gray-600">Entreprise XYZ – Refonte d’un outil interne en React + Node.js</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compétences Techniques -->
+  <section class="py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-extrabold text-center text-secondary mb-16">Compétences Techniques</h2>
+      
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="space-y-6">
+          <div>
+            <div class="flex justify-between mb-2"><span>React / React Native</span><span class="text-accent font-bold">90%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-4"><div class="bg-primary h-4 rounded-full" style="width:90%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-2"><span>Node.js / Express</span><span class="text-accent font-bold">85%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-4"><div class="bg-primary h-4 rounded-full" style="width:85%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-2"><span>JavaScript / TypeScript</span><span class="text-accent font-bold">90%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-4"><div class="bg-primary h-4 rounded-full" style="width:90%"></div></div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div>
+            <div class="flex justify-between mb-2"><span>Bases de données (SQL/NoSQL)</span><span class="text-accent font-bold">80%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-4"><div class="bg-primary h-4 rounded-full" style="width:80%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-2"><span>Git & GitHub</span><span class="text-accent font-bold">95%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-4"><div class="bg-primary h-4 rounded-full" style="width:95%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-2"><span>Tailwind / UI Design</span><span class="text-accent font-bold">85%</span></div>
+            <div class="w-full bg-gray-200 rounded-full h-4"><div class="bg-primary h-4 rounded-full" style="width:85%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soft Skills -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-extrabold text-secondary mb-12">Et aussi...</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-lg">
+        <div class="bg-gray-50 rounded-xl p-6 shadow">Autonome</div>
+        <div class="bg-gray-50 rounded-xl p-6 shadow">Curieux</div>
+        <div class="bg-gray-50 rounded-xl p-6 shadow">Rigoureux</div>
+        <div class="bg-gray-50 rounded-xl p-6 shadow">Travail en équipe</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script menu mobile -->
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

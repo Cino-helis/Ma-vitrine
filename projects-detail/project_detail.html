@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nom du Projet - Cino</title>
+  <base href="/">
+  <meta name="description" content="Détails du projet : Nom du Projet - Réalisé par Ton Prénom"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            primary: '#1e40af',
+            secondary: '#1e293b',
+            accent: '#3b82f6',
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navigation fixe -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/index.html" class="text-2xl font-bold text-primary">Cino</a>
+      <div class="hidden md:flex space-x-10">
+        <a href="/index.html" class="hover:text-accent transition font-medium">Accueil</a>
+        <a href="/projects.html" class="hover:text-accent transition font-medium">Mes Projets</a>
+        <a href="/about.html" class="hover:text-accent transition font-medium">À propos</a>
+        <a href="/contact.html" class="hover:text-accent transition font-medium">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-3xl focus:outline-none">Menu</button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <a href="/index.html" class="block py-3 px-6 hover:bg-gray-100">Accueil</a>
+      <a href="/projects.html" class="block py-3 px-6 hover:bg-gray-100">Mes Projets</a>
+      <a href="/about.html" class="block py-3 px-6 hover:bg-gray-100">À propos</a>
+      <a href="/contact.html" class="block py-3 px-6 hover:bg-gray-100">Contact</a>
+    </div>
+  </nav>
+
+  <!-- En-tête du projet -->
+  <header class="pt-28 pb-12 bg-gradient-to-b from-gray-100 to-gray-50">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-secondary mb-4">
+        Application de Gestion de Tâches
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Une application mobile complète avec authentification, synchronisation en temps réel et notifications push.
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-20">
+
+    <!-- Section Aperçu : Captures d'écran stylisées -->
+    <section>
+      <h2 class="text-3xl font-bold text-secondary mb-10 text-center">Aperçu du Projet</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl shadow-xl p-6 transform hover:scale-105 transition">
+          <div class="border-8 border-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+            <img src="assets/img/screenshot1.jpg" alt="Écran principal" class="w-full"/>
+          </div>
+          <p class="text-center mt-4 text-gray-600 font-medium">Écran d'accueil</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-6 transform hover:scale-105 transition">
+          <div class="border-8 border-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+            <img src="assets/img/screenshot2.jpg" alt="Création de tâche" class="w-full"/>
+          </div>
+          <p class="text-center mt-4 text-gray-600 font-medium">Création de tâche</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Technologies -->
+    <section class="bg-white rounded-2xl shadow-lg p-10">
+      <h2 class="text-3xl font-bold text-secondary mb-8">Technologies Utilisées</h2>
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-8">
+        <div class="text-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" class="w-16 h-16 mx-auto mb-2"/>
+          <p class="text-sm font-medium">React Native</p>
+        </div>
+        <div class="text-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="w-16 h-16 mx-auto mb-2"/>
+          <p class="text-sm font-medium">Firebase</p>
+        </div>
+        <div class="text-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux" class="w-16 h-16 mx-auto mb-2"/>
+          <p class="text-sm font-medium">Redux</p>
+        </div>
+        <div class="text-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="w-16 h-16 mx-auto mb-2"/>
+          <p class="text-sm font-medium">TypeScript</p>
+        </div>
+        <div class="text-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg" alt="Expo" class="w-16 h-16 mx-auto mb-2"/>
+          <p class="text-sm font-medium">Expo</p>
+        </div>
+        <div class="text-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" class="w-16 h-16 mx-auto mb-2"/>
+          <p class="text-sm font-medium">Tailwind</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Rôle & Défis -->
+    <section class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-3xl font-bold text-secondary mb-6">Mon Rôle</h2>
+        <p class="text-lg leading-relaxed text-gray-700">
+          Développement complet de l’application mobile de A à Z : architecture, UI/UX, gestion d’état, authentification sécurisée, base de données NoSQL et notifications push.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-3xl font-bold text-secondary mb-6">Défis Relevés</h2>
+        <ul class="space-y-4 text-gray-700">
+          <li class="flex items-start">
+            <span class="text-accent mr-3">Check</span> Synchronisation en temps réel entre plusieurs appareils
+          </li>
+          <li class="flex items-start">
+            <span class="text-accent mr-3">Check</span> Gestion des états hors ligne (offline first)
+          </li>
+          <li class="flex items-start">
+            <span class="text-accent mr-3">Check</span> Optimisation des performances sur bas de gamme
+          </li>
+          <li class="flex items-start">
+            <span class="text-accent mr-3">Check</span> Sécurité des données sensibles (JWT + Firebase Auth)
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section Liens d'action -->
+    <section class="text-center py-12">
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="https://github.com/tonpseudo/task-app" target="_blank"
+           class="inline-block bg-secondary hover:bg-gray-800 text-white font-bold text-xl py-5 px-12 rounded-xl shadow-lg transition transform hover:scale-105">
+           Voir le Code Source (GitHub)
+        </a>
+        <a href="https://taskapp.vercel.app" target="_blank"
+           class="inline-block bg-primary hover:bg-accent text-white font-bold text-xl py-5 px-12 rounded-xl shadow-lg transition transform hover:scale-105">
+           Voir la Démo Live
+        </a>
+      </div>
+      <a href="/projects.html" class="inline-block mt-10 text-accent hover:underline font-medium">
+        ← Retour à tous les projets
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Script menu mobile -->
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
